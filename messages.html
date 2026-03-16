@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Messages Vocaux - Birthday Genius</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#6211d4",
+                        "background-light": "#f7f6f8",
+                        "background-dark": "#181022",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen pb-24">
+<!-- Header Section -->
+<header class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10">
+<div class="flex items-center p-4 justify-between">
+<button onclick="window.location.href='dashboard.html'" class="text-slate-900 dark:text-slate-100 p-2 hover:bg-primary/10 rounded-full transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="text-lg font-bold leading-tight tracking-tight flex-1 text-center pr-10">Messages Vocaux</h1>
+</div>
+<!-- Tabs -->
+<div class="flex border-b border-primary/10 px-4 gap-8">
+<a class="flex flex-col items-center justify-center border-b-2 border-primary text-primary pb-3 pt-4" href="messages.html">
+<span class="text-sm font-bold">Générés</span>
+</a>
+<a class="flex flex-col items-center justify-center border-b-2 border-transparent text-slate-500 dark:text-slate-400 pb-3 pt-4 hover:text-primary transition-colors" href="messages.html">
+<span class="text-sm font-bold">Favoris</span>
+</a>
+</div>
+</header>
+<main class="p-4 max-w-2xl mx-auto space-y-6">
+<!-- AI Configuration Section -->
+<section class="bg-primary/5 dark:bg-primary/10 rounded-xl p-5 border border-primary/10">
+<h2 class="text-base font-bold mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">psychology</span>
+                Configuration de l'IA
+            </h2>
+<div class="grid grid-cols-2 gap-4 mb-4">
+<div class="space-y-2">
+<label class="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">Voix AI</label>
+<div class="flex bg-white dark:bg-slate-800 rounded-lg p-1 border border-primary/10">
+<button class="flex-1 py-2 text-sm font-medium rounded-md bg-primary text-white shadow-sm">Homme</button>
+<button class="flex-1 py-2 text-sm font-medium rounded-md text-slate-600 dark:text-slate-300 hover:bg-primary/5">Femme</button>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">Ton</label>
+<select class="w-full bg-white dark:bg-slate-800 border-primary/10 rounded-lg text-sm py-2 focus:ring-primary focus:border-primary dark:text-slate-100">
+<option>Joyeux</option>
+<option>Émouvant</option>
+<option>Humoristique</option>
+<option>Formel</option>
+</select>
+</div>
+</div>
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-3 rounded-lg flex items-center justify-center gap-2 transition-transform active:scale-95 shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined">add_circle</span>
+                Générer un message pour un contact
+            </button>
+</section>
+<!-- List of Voice Messages -->
+<section class="space-y-4">
+<div class="flex items-center justify-between">
+<h2 class="text-lg font-bold">Dernières créations</h2>
+<button class="text-primary text-sm font-medium">Tout voir</button>
+</div>
+<!-- Message Item 1 -->
+<div class="bg-white dark:bg-slate-800/50 p-4 rounded-xl border border-primary/5 flex items-center gap-4">
+<div class="relative">
+<div class="size-14 rounded-full bg-cover bg-center border-2 border-primary/20" data-alt="Portrait d'un homme souriant" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAeAN13w3g3CY5ZF52TkPG9u8We8f8u6VdNhfkCCLAfJX67BC_qLpru0Yy_MY64k-YmDymd8VrlKxJVmEoNyBJVY2SOYt1OuPKePGrGDhES_FWlsrWAqHe3ojrDuZOQKNIeJRr3kY7iQUE_MSXYaFX0TxDKsHqnUCmHN1pg_FL749AtX7zDJbp39A_T4YAZu3C0R3phKI5F8uVHmS46MkJDtVsWSfsnzIaz1IOxfTqUZye3E3X2Hc62T4DmB2P_V7-6UnWcGlt1HCuS')"></div>
+<div class="absolute -bottom-1 -right-1 bg-green-500 size-4 rounded-full border-2 border-white dark:border-slate-800"></div>
+</div>
+<div class="flex-1">
+<h3 class="font-bold text-slate-900 dark:text-slate-100">Thomas Legrand</h3>
+<p class="text-xs text-slate-500 dark:text-slate-400">Généré il y a 2h • 0:42</p>
+<!-- Simple Audio Visualizer Mockup -->
+<div class="flex items-end gap-0.5 h-4 mt-2">
+<div class="bg-primary/30 w-1 h-2 rounded-full"></div>
+<div class="bg-primary/50 w-1 h-3 rounded-full"></div>
+<div class="bg-primary w-1 h-4 rounded-full"></div>
+<div class="bg-primary/70 w-1 h-2 rounded-full"></div>
+<div class="bg-primary/40 w-1 h-1 rounded-full"></div>
+<div class="bg-primary/60 w-1 h-3 rounded-full"></div>
+<div class="bg-primary w-1 h-4 rounded-full"></div>
+<div class="bg-primary/50 w-1 h-2 rounded-full"></div>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="size-10 flex items-center justify-center bg-primary text-white rounded-full hover:bg-primary/90">
+<span class="material-symbols-outlined">play_arrow</span>
+</button>
+<button class="size-10 flex items-center justify-center text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">share</span>
+</button>
+</div>
+</div>
+<!-- Message Item 2 -->
+<div class="bg-white dark:bg-slate-800/50 p-4 rounded-xl border border-primary/5 flex items-center gap-4">
+<div class="relative">
+<div class="size-14 rounded-full bg-cover bg-center border-2 border-primary/20" data-alt="Portrait d'une femme souriante" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBoqNcWM4lL60DnRunw9b4Y_RBOejQYGbZqUlQ0bA3WiXB8G2-TuoonOwNnjR48dEqB_crymRZrOUQFc32O_pVUJCf0TcxkOpz1yc2eBNI58Wl4WNQFgIEKWKPoe7LU7LpINmFYUdCRjdTEiu8D3Uj-IQGP-aEqszH9yXJCvQmDwRQk2GoHNRo86DjuQvXMleG3bpNg0-y3MAoJeddVUc8R3cpVRpivOR47c0JcpWa7Ei0PvwL9uHDIvmCY3t4UylLzr5jDqHkxSzPa')"></div>
+</div>
+<div class="flex-1">
+<h3 class="font-bold text-slate-900 dark:text-slate-100">Julie Martin</h3>
+<p class="text-xs text-slate-500 dark:text-slate-400">Généré hier • 1:15</p>
+<div class="flex items-end gap-0.5 h-4 mt-2 opacity-50">
+<div class="bg-slate-400 w-1 h-1 rounded-full"></div>
+<div class="bg-slate-400 w-1 h-2 rounded-full"></div>
+<div class="bg-slate-400 w-1 h-4 rounded-full"></div>
+<div class="bg-slate-400 w-1 h-3 rounded-full"></div>
+<div class="bg-slate-400 w-1 h-1 rounded-full"></div>
+<div class="bg-slate-400 w-1 h-2 rounded-full"></div>
+<div class="bg-slate-400 w-1 h-4 rounded-full"></div>
+<div class="bg-slate-400 w-1 h-3 rounded-full"></div>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="size-10 flex items-center justify-center bg-primary text-white rounded-full hover:bg-primary/90">
+<span class="material-symbols-outlined">pause</span>
+</button>
+<button class="size-10 flex items-center justify-center text-primary transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">favorite</span>
+</button>
+</div>
+</div>
+<!-- Message Item 3 -->
+<div class="bg-white dark:bg-slate-800/50 p-4 rounded-xl border border-primary/5 flex items-center gap-4 opacity-70">
+<div class="size-14 rounded-full bg-cover bg-center border-2 border-primary/20" data-alt="Portrait d'un homme barbu" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAnu6OJtk_UjF3kTrcqini9lez-lY5-Ctjv7bvCmTNpohGCU6RGa673BgMNBHLpRPlzs33hmy1bYQFPFCd1Q8K5YqpwXJA96034aM5tYdiw2_i4NtqsJefKUa3qRELxjeAnmZSnU85JqTT0AWvnM6jaNcqoZ764pMrqN90rCjgnXmF8a6f7LiIUENytA0LD5ZkW85yfOYugukn92kCmabFzXzNshLja7EJcxek4xwFYHz03TVNFffk5lbYuOzL9t0emQkalIke7lCgI')"></div>
+<div class="flex-1">
+<h3 class="font-bold text-slate-900 dark:text-slate-100">Marc Dupont</h3>
+<p class="text-xs text-slate-500 dark:text-slate-400">Le 12 Mai • 0:58</p>
+</div>
+<div class="flex gap-2">
+<button class="size-10 flex items-center justify-center bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-full">
+<span class="material-symbols-outlined">play_arrow</span>
+</button>
+<button class="size-10 flex items-center justify-center text-slate-400">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 w-full border-t border-primary/10 bg-white/80 dark:bg-background-dark/80 backdrop-blur-lg px-4 pb-6 pt-2 z-20">
+<div class="flex gap-2 max-w-lg mx-auto">
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 hover:text-primary transition-colors" href="dashboard.html">
+<span class="material-symbols-outlined text-2xl">home</span>
+<span class="text-[10px] font-medium leading-none">Accueil</span>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-primary" href="messages.html">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1">mic</span>
+<span class="text-[10px] font-medium leading-none">Messages</span>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 hover:text-primary transition-colors" href="contacts.html">
+<span class="material-symbols-outlined text-2xl">group</span>
+<span class="text-[10px] font-medium leading-none">Contacts</span>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 hover:text-primary transition-colors" href="stats.html">
+<span class="material-symbols-outlined text-2xl">account_circle</span>
+<span class="text-[10px] font-medium leading-none">Profil</span>
+</a>
+</div>
+</nav>
+</body></html>

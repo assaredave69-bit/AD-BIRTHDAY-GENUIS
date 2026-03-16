@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Birthday Genius - Calendrier</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#6211d4",
+                        "background-light": "#f7f6f8",
+                        "background-dark": "#181022",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.75rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .birthday-dot {
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background-color: #6211d4;
+            margin-top: 2px;
+        }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+<div class="flex flex-col min-h-screen max-w-md mx-auto bg-background-light dark:bg-background-dark border-x border-primary/10">
+<!-- Header -->
+<header class="flex items-center justify-between p-4 sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-2xl">menu</span>
+<h1 class="text-xl font-bold tracking-tight">Août 2023</h1>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-400">search</span>
+<div class="size-8 rounded-full bg-primary/20 flex items-center justify-center border border-primary/30">
+<span class="material-symbols-outlined text-primary text-sm">person</span>
+</div>
+</div>
+</header>
+<!-- View Switcher -->
+<div class="px-4 py-2">
+<div class="flex h-10 w-full items-center justify-center rounded-lg bg-primary/5 dark:bg-primary/10 p-1 border border-primary/10">
+<label class="flex cursor-pointer h-full grow items-center justify-center rounded-md px-2 has-[:checked]:bg-white dark:has-[:checked]:bg-primary/30 has-[:checked]:shadow-sm text-slate-500 dark:text-slate-400 has-[:checked]:text-primary dark:has-[:checked]:text-slate-100 text-sm font-semibold transition-all">
+<span>Mois</span>
+<input checked="" class="hidden" name="view-type" type="radio" value="Month"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center rounded-md px-2 has-[:checked]:bg-white dark:has-[:checked]:bg-primary/30 has-[:checked]:shadow-sm text-slate-500 dark:text-slate-400 has-[:checked]:text-primary dark:has-[:checked]:text-slate-100 text-sm font-semibold transition-all">
+<span>Semaine</span>
+<input class="hidden" name="view-type" type="radio" value="Week"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center rounded-md px-2 has-[:checked]:bg-white dark:has-[:checked]:bg-primary/30 has-[:checked]:shadow-sm text-slate-500 dark:text-slate-400 has-[:checked]:text-primary dark:has-[:checked]:text-slate-100 text-sm font-semibold transition-all">
+<span>Jour</span>
+<input class="hidden" name="view-type" type="radio" value="Day"/>
+</label>
+</div>
+</div>
+<!-- Calendar Grid -->
+<div class="p-4">
+<div class="grid grid-cols-7 mb-2">
+<div class="text-center text-xs font-bold text-slate-400 dark:text-slate-500 py-2">D</div>
+<div class="text-center text-xs font-bold text-slate-400 dark:text-slate-500 py-2">L</div>
+<div class="text-center text-xs font-bold text-slate-400 dark:text-slate-500 py-2">M</div>
+<div class="text-center text-xs font-bold text-slate-400 dark:text-slate-500 py-2">M</div>
+<div class="text-center text-xs font-bold text-slate-400 dark:text-slate-500 py-2">J</div>
+<div class="text-center text-xs font-bold text-slate-400 dark:text-slate-500 py-2">V</div>
+<div class="text-center text-xs font-bold text-slate-400 dark:text-slate-500 py-2">S</div>
+</div>
+<div class="grid grid-cols-7 gap-y-1">
+<!-- Row 1 -->
+<div class="h-12 flex items-center justify-center text-slate-300 dark:text-slate-700 text-sm">30</div>
+<div class="h-12 flex items-center justify-center text-slate-300 dark:text-slate-700 text-sm">31</div>
+<div class="h-12 flex flex-col items-center justify-center text-sm relative">
+<span class="z-10">1</span>
+<div class="birthday-dot"></div>
+</div>
+<div class="h-12 flex items-center justify-center text-sm">2</div>
+<div class="h-12 flex items-center justify-center text-sm">3</div>
+<div class="h-12 flex items-center justify-center text-sm">4</div>
+<div class="h-12 flex flex-col items-center justify-center text-sm relative">
+<span class="z-10">5</span>
+<div class="birthday-dot"></div>
+</div>
+<!-- Row 2 -->
+<div class="h-12 flex items-center justify-center text-sm">6</div>
+<div class="h-12 flex items-center justify-center text-sm">7</div>
+<div class="h-12 flex items-center justify-center text-sm">8</div>
+<div class="h-12 flex items-center justify-center text-sm">9</div>
+<div class="h-12 flex items-center justify-center text-sm">10</div>
+<div class="h-12 flex items-center justify-center text-sm">11</div>
+<div class="h-12 flex items-center justify-center text-sm">12</div>
+<!-- Row 3 -->
+<div class="h-12 flex items-center justify-center text-sm">13</div>
+<div class="h-12 flex items-center justify-center text-sm">14</div>
+<div class="h-12 flex items-center justify-center text-sm">15</div>
+<div class="h-12 flex items-center justify-center text-sm">16</div>
+<div class="h-12 flex flex-col items-center justify-center text-sm relative group">
+<div class="absolute inset-1 rounded-full bg-primary/20 border border-primary/50"></div>
+<span class="z-10 font-bold text-primary dark:text-slate-100">17</span>
+<div class="birthday-dot bg-primary"></div>
+</div>
+<div class="h-12 flex items-center justify-center text-sm">18</div>
+<div class="h-12 flex items-center justify-center text-sm">19</div>
+<!-- Row 4 -->
+<div class="h-12 flex items-center justify-center text-sm">20</div>
+<div class="h-12 flex items-center justify-center text-sm">21</div>
+<div class="h-12 flex flex-col items-center justify-center text-sm relative">
+<span class="z-10">22</span>
+<div class="birthday-dot"></div>
+</div>
+<div class="h-12 flex items-center justify-center text-sm">23</div>
+<div class="h-12 flex items-center justify-center text-sm">24</div>
+<div class="h-12 flex items-center justify-center text-sm">25</div>
+<div class="h-12 flex items-center justify-center text-sm">26</div>
+<!-- Row 5 -->
+<div class="h-12 flex items-center justify-center text-sm">27</div>
+<div class="h-12 flex items-center justify-center text-sm">28</div>
+<div class="h-12 flex items-center justify-center text-sm">29</div>
+<div class="h-12 flex items-center justify-center text-sm">30</div>
+<div class="h-12 flex items-center justify-center text-sm">31</div>
+<div class="h-12 flex items-center justify-center text-slate-300 dark:text-slate-700 text-sm">1</div>
+<div class="h-12 flex items-center justify-center text-slate-300 dark:text-slate-700 text-sm">2</div>
+</div>
+</div>
+<!-- Selected Day Events -->
+<div class="flex-1 bg-white dark:bg-primary/5 rounded-t-xl mt-4 border-t border-primary/10">
+<div class="p-5">
+<div class="flex items-center justify-between mb-6">
+<h3 class="text-lg font-bold">Jeu, 17 Aoû</h3>
+<span class="text-xs font-medium text-primary bg-primary/10 px-2 py-1 rounded-full">3 événements</span>
+</div>
+<div class="space-y-4">
+<!-- Event 1 -->
+<div class="flex items-center gap-4 p-3 rounded-lg bg-primary/10 border border-primary/20">
+<div class="size-12 rounded-full overflow-hidden bg-primary/20 flex-shrink-0">
+<img class="size-full object-cover" data-alt="Portrait d'une femme souriante aux cheveux noirs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqJanUH0MixOcargApGFZxlgNstCjtme7xYwqSqjignjP90hhSjvOKg4D6yfr5fNHQnolekvNmxnjPq_iuDstbif6Y_x1jE3miUdmpLwAMfEPXQtqcq7f6TsUz4PZ7VV2EdKGJPv4X9nsZGNWK2fGZdOHGN1APvgbtBM17H1WSZOUACooZVu47etjJLrIEonUrB5vd-dRH2HSH6IcaV5NXfw0ja1zgkL8FJ0snVQr73g4iknP5Zt3_H1cNLAVci7i9By9N-ktyuV_z"/>
+</div>
+<div class="flex-1">
+<h4 class="font-bold text-sm">Sarah Jenkins</h4>
+<p class="text-xs text-slate-500 dark:text-slate-400">Aujourd'hui 28 ans • <span class="text-primary font-medium">BFF</span></p>
+</div>
+<div class="flex gap-2">
+<button class="size-8 rounded-full flex items-center justify-center bg-white dark:bg-background-dark shadow-sm">
+<span class="material-symbols-outlined text-primary text-lg">cake</span>
+</button>
+</div>
+</div>
+<!-- Event 2 -->
+<div class="flex items-center gap-4 p-3 rounded-lg border border-primary/5 hover:bg-primary/5 transition-colors">
+<div class="size-12 rounded-full overflow-hidden bg-slate-200 dark:bg-slate-800 flex-shrink-0">
+<img class="size-full object-cover" data-alt="Portrait d'un homme barbu avec des lunettes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDR6Lc7-gt_Ld4gx6MxJhNKYZveN3Wcij2FhYJpvw8rO_inIw1BetlVw-ARdqMGGZSX0z1d-YjgWNDjV9XlSUJ24tl-YpoxbiyCA2hCUU54TmKW1vcsSErhxe4_05wLIfxpv-ykejYK2uJO6S0uwrgc7NLCM-P23VU7SQSWU4CKzqqGSYpsgML9g4cdpCClM3eXGre22xAlyU7MPV49GfBnA0QUxbB0yJX1YW_OMhhoTXkDFj5GsDQ8kGqnDwsCsIat1nznziIqhHA2"/>
+</div>
+<div class="flex-1">
+<h4 class="font-bold text-sm">Michael Chen</h4>
+<p class="text-xs text-slate-500 dark:text-slate-400">Aujourd'hui 34 ans • <span class="text-slate-400 font-medium">Travail</span></p>
+</div>
+<div class="flex gap-2">
+<button class="size-8 rounded-full flex items-center justify-center bg-slate-100 dark:bg-slate-800">
+<span class="material-symbols-outlined text-slate-400 text-lg">send</span>
+</button>
+</div>
+</div>
+<!-- Event 3 -->
+<div class="flex items-center gap-4 p-3 rounded-lg border border-primary/5 hover:bg-primary/5 transition-colors">
+<div class="size-12 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center flex-shrink-0 border-2 border-primary/20">
+<span class="material-symbols-outlined text-primary">shopping_bag</span>
+</div>
+<div class="flex-1">
+<h4 class="font-bold text-sm">Rappel Cadeau</h4>
+<p class="text-xs text-slate-500 dark:text-slate-400">Acheter cadeau pour la fête de Sarah</p>
+</div>
+<span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">10:00</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Floating Action Button -->
+<button class="fixed bottom-24 right-6 size-14 bg-primary text-white rounded-full shadow-lg shadow-primary/40 flex items-center justify-center z-20">
+<span class="material-symbols-outlined text-2xl">add</span>
+</button>
+<!-- Bottom Navigation -->
+<nav class="sticky bottom-0 bg-background-light dark:bg-background-dark border-t border-primary/10 px-6 py-3 flex justify-between items-center z-10">
+<a class="flex flex-col items-center gap-1 text-primary" href="calendar.html">
+<span class="material-symbols-outlined transition-all" style="font-variation-settings: 'FILL' 1;">calendar_today</span>
+<span class="text-[10px] font-bold">Calendrier</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="contacts.html">
+<span class="material-symbols-outlined">contacts</span>
+<span class="text-[10px] font-bold">Contacts</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="dashboard.html">
+<span class="material-symbols-outlined">featured_seasonal_and_gifts</span>
+<span class="text-[10px] font-bold">Listes</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="config.html">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-[10px] font-bold">Réglages</span>
+</a>
+</nav>
+</div>
+</body></html>

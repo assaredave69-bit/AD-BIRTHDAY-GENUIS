@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Birthday Genius - Synchronisation des Contacts</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#6211d4",
+                        "background-light": "#f7f6f8",
+                        "background-dark": "#181022",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.75rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="max-w-md mx-auto min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="flex items-center p-4 justify-between">
+<button onclick="window.location.href='contacts.html'" class="flex size-10 items-center justify-center rounded-full hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-slate-900 dark:text-slate-100">arrow_back</span>
+</button>
+<h1 class="text-lg font-bold leading-tight tracking-tight flex-1 text-center pr-10">Synchronisation des Contacts</h1>
+</header>
+<main class="flex-1 px-4 py-6">
+<div class="text-center mb-8">
+<div class="inline-flex items-center justify-center p-3 mb-4 rounded-xl bg-primary/20 text-primary">
+<span class="material-symbols-outlined text-4xl">cake</span>
+</div>
+<h2 class="text-2xl font-bold leading-tight mb-2">Retrouvez les anniversaires de vos amis</h2>
+<p class="text-slate-600 dark:text-slate-400 text-base">
+                    Connectez vos contacts pour importer automatiquement les anniversaires et ne jamais manquer une fête.
+                </p>
+</div>
+<!-- Sync Options -->
+<div class="space-y-3 mb-8">
+<button class="w-full flex items-center gap-4 bg-white/5 dark:bg-primary/5 hover:bg-primary/10 border border-slate-200 dark:border-primary/20 p-4 rounded-xl transition-all group">
+<div class="flex items-center justify-center rounded-lg bg-primary/20 text-primary shrink-0 size-12">
+<span class="material-symbols-outlined">account_circle</span>
+</div>
+<div class="flex flex-col text-left flex-1">
+<p class="font-semibold">Contacts Google</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Synchroniser depuis votre compte Google</p>
+</div>
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">chevron_right</span>
+</button>
+<button class="w-full flex items-center gap-4 bg-white/5 dark:bg-primary/5 hover:bg-primary/10 border border-slate-200 dark:border-primary/20 p-4 rounded-xl transition-all group">
+<div class="flex items-center justify-center rounded-lg bg-primary/20 text-primary shrink-0 size-12">
+<span class="material-symbols-outlined">smartphone</span>
+</div>
+<div class="flex flex-col text-left flex-1">
+<p class="font-semibold">Contacts du téléphone</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Importer depuis votre répertoire</p>
+</div>
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">chevron_right</span>
+</button>
+<button class="w-full flex items-center gap-4 bg-white/5 dark:bg-primary/5 hover:bg-primary/10 border border-slate-200 dark:border-primary/20 p-4 rounded-xl transition-all group">
+<div class="flex items-center justify-center rounded-lg bg-primary/20 text-primary shrink-0 size-12">
+<span class="material-symbols-outlined">upload_file</span>
+</div>
+<div class="flex flex-col text-left flex-1">
+<p class="font-semibold">Importer un CSV</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Télécharger un fichier .csv ou .vcf</p>
+</div>
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">chevron_right</span>
+</button>
+</div>
+<!-- Preview / Progress Section -->
+<div class="bg-primary/5 rounded-xl p-6 border border-primary/10">
+<div class="flex items-center justify-between mb-4">
+<h3 class="font-bold text-slate-900 dark:text-slate-100">42 contacts trouvés</h3>
+<span class="text-primary text-sm font-medium">Prêt à synchroniser</span>
+</div>
+<!-- Avatar Preview -->
+<div class="flex items-center -space-x-3 mb-6 overflow-hidden">
+<img alt="Photo de profil d'une femme souriante" class="size-12 rounded-full border-4 border-background-dark object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAz0DnRLEZrOwIVV1H6GvM3W6f2gIK0XzYr2qJNqmfbGKCa6mhgjZDZY40nrO9BnzrAZEeIXiwfAWIR0fBPQ4Lb4vfbczrqVo5BdPcUB5M-cPA3UsjuHik9AC_BuU2Z4oAIE8o5kUs7wVudE_ipYlvpByI0Ymrne7MhcRkwmhAbZViAUjijNaqZfjAQMVGVcs3_Zf84wLICqT1H82PWEOwyj1BpD7dklz3oxMxRdGBxshKiuUZ_t5KsZRb8ih60vU3tj4yYdxZtX784"/>
+<img alt="Photo de profil d'un homme à lunettes" class="size-12 rounded-full border-4 border-background-dark object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlvHT1m8OSeHJGM9IcffJIaTsvZ61iaOkeeQxh3urEFKcW7GxtORl4ppPMRh_MoHIXbWk-IK7gd2Rs30G2wjgzdgTVUNabYIgYTf1EgaJVpxWiQeej777v1j_tHLEq5zDHMnup2OYMEaPafeUZwyAC6NhgjEV6T7wL87uMEKf09_0zgi6hX7vYnmIpI0b-wg-U5mJw-lTw-gD84cVX6sh6UJhUSOAweUxFNgX8-eaIxhl7MX_Ge8JvQEzx3KSUVazn2a-m5Jz8j9Ew"/>
+<img alt="Photo de profil d'une femme aux cheveux longs" class="size-12 rounded-full border-4 border-background-dark object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXlkXGd6abvfNSJsXE1v89uPSCOM-_TNUaLj-Ev-7_Zu2HvHyIHx0ypcIBan_yFliUGwtj6R6Ts7CXpPjFecErDZkBvLbZCH_9FkROBLoePfaWqAUZFYXPA2dv8OFkvSanXvlke7FVD9-W6sPrYkufhMLweoSZQNco1NS_vfy07NuEVr4R-tQsavgPNY8agpgj-moqcWHFFjV7-ALlpOex96wlMhQFrDA0t5pGlO350BWqACSFo0LavTLU1nVvk7SrHeBRMCM92nmg"/>
+<img alt="Photo de profil d'un homme souriant" class="size-12 rounded-full border-4 border-background-dark object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6ZJz8i2ISIDB-3x78b53mvcDhsk-xC8uPYccO5mdxM0_I6IZViddnDMwpmcVrJXhbcJXj123vJn4zpw_1ZnBcIbvATINFL6sYsnGjGIlW9qHMkgzk2DUgFnUowk-EzW3eEq7vzFTakbefgOM9EO2Ek-hSe9Tq_qxMdVgLv5DI6ppu0jyzvgGLcqwJSBd9Pnwe0Qlzfxw4QC52M8_7WfotqHkJ0bM_zmNNaz-D2VLiA6Kbjgf-FRQhLMfe9m2_P-6Uwg4H15ulrMuI"/>
+<div class="size-12 rounded-full border-4 border-background-dark bg-primary flex items-center justify-center text-xs font-bold text-white">
+                        +38
+                    </div>
+</div>
+<!-- Progress Bar -->
+<div class="space-y-2">
+<div class="h-2 w-full bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[65%] rounded-full"></div>
+</div>
+<div class="flex justify-between text-xs text-slate-500 dark:text-slate-400">
+<span>Analyse des données...</span>
+<span>65%</span>
+</div>
+</div>
+</div>
+</main>
+<!-- Fixed Footer Action -->
+<footer class="p-6 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-t border-slate-200 dark:border-slate-800">
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-xl shadow-lg shadow-primary/20 transition-all active:scale-[0.98]">
+                Lancer la Synchronisation
+            </button>
+<p class="text-center text-xs text-slate-500 dark:text-slate-400 mt-4">
+                En synchronisant, vous acceptez notre <a class="text-primary hover:underline" href="dashboard.html">Politique de Confidentialité</a>
+</p>
+</footer>
+</div>
+</body></html>

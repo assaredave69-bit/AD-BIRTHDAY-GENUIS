@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#6211d4",
+                        "background-light": "#f7f6f8",
+                        "background-dark": "#181022",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.75rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>Configuration Génie des Anniversaires IA</title>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="max-w-md mx-auto min-h-screen flex flex-col bg-background-light dark:bg-background-dark shadow-2xl overflow-hidden">
+<!-- Header -->
+<div class="flex items-center px-4 py-6 justify-between border-b border-slate-200 dark:border-primary/20">
+<button onclick="window.location.href='dashboard.html'" class="text-slate-900 dark:text-slate-100 p-2 hover:bg-slate-200 dark:hover:bg-primary/20 rounded-full transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="text-lg font-bold leading-tight tracking-tight flex-1 text-center pr-10">Configuration des Messages IA</h1>
+</div>
+<!-- Main Content Area -->
+<div class="flex-1 overflow-y-auto px-4 py-6 space-y-8">
+<!-- Tone Selection Section -->
+<section class="space-y-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">auto_fix_high</span>
+<h2 class="text-lg font-bold leading-tight tracking-tight">Ton par Défaut</h2>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<button class="flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-primary text-white font-medium border-2 border-primary transition-all">
+<span class="material-symbols-outlined text-sm">sentiment_satisfied</span>
+                    Amical
+                </button>
+<button class="flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-white dark:bg-primary/10 text-slate-900 dark:text-slate-100 font-medium border-2 border-slate-200 dark:border-primary/20 hover:border-primary transition-all">
+<span class="material-symbols-outlined text-sm">work</span>
+                    Professionnel
+                </button>
+<button class="flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-white dark:bg-primary/10 text-slate-900 dark:text-slate-100 font-medium border-2 border-slate-200 dark:border-primary/20 hover:border-primary transition-all">
+<span class="material-symbols-outlined text-sm">self_improvement</span>
+                    Spirituel
+                </button>
+<button class="flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-white dark:bg-primary/10 text-slate-900 dark:text-slate-100 font-medium border-2 border-slate-200 dark:border-primary/20 hover:border-primary transition-all">
+<span class="material-symbols-outlined text-sm">mood</span>
+                    Humoristique
+                </button>
+</div>
+</section>
+<!-- Automation Toggle Section -->
+<section>
+<div class="flex flex-1 flex-col items-start justify-between gap-4 rounded-xl border border-slate-200 dark:border-primary/30 bg-white dark:bg-primary/5 p-5 sm:flex-row sm:items-center">
+<div class="flex flex-col gap-1">
+<p class="text-slate-900 dark:text-slate-100 text-base font-bold leading-tight">Envoi Automatique</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal">Envoyer les vœux automatiquement le jour J</p>
+</div>
+<label class="relative flex h-[31px] w-[51px] cursor-pointer items-center rounded-full border-none bg-slate-200 dark:bg-primary/20 p-0.5 has-[:checked]:justify-end has-[:checked]:bg-primary transition-all">
+<div class="h-full w-[27px] rounded-full bg-white shadow-md"></div>
+<input checked="" class="invisible absolute" type="checkbox"/>
+</label>
+</div>
+</section>
+<!-- Live Preview Section -->
+<section class="space-y-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">visibility</span>
+<h2 class="text-lg font-bold leading-tight tracking-tight">Aperçu en Direct</h2>
+</div>
+<button class="flex items-center gap-1 text-primary text-sm font-semibold hover:underline">
+<span class="material-symbols-outlined text-sm">refresh</span>
+                    Régénérer
+                </button>
+</div>
+<!-- AI Generated Message Card -->
+<div class="relative rounded-xl border border-slate-200 dark:border-primary/30 bg-white dark:bg-primary/5 p-5 space-y-4">
+<div class="flex items-center gap-3 border-b border-slate-100 dark:border-primary/10 pb-4">
+<div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">person</span>
+</div>
+<div>
+<p class="text-sm font-bold">Contact Type : Sarah J.</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Destinataire</p>
+</div>
+</div>
+<div class="relative">
+<span class="material-symbols-outlined absolute -top-2 -left-2 text-primary/20 text-3xl">format_quote</span>
+<p class="text-slate-700 dark:text-slate-300 italic leading-relaxed pl-4">
+                        "Salut Sarah ! Je te souhaite le plus joyeux des anniversaires aujourd'hui. J'espère que ta journée sera remplie de joie, de rires et de tout ce que tu aimes. Tu es une amie formidable, et je suis ravi que nous puissions célébrer une autre année de ta vie incroyable !"
+                    </p>
+</div>
+<div class="flex items-center justify-between pt-2">
+<span class="text-[10px] uppercase tracking-wider text-slate-400 font-bold">Ton : Amical</span>
+<div class="flex gap-2">
+<span class="material-symbols-outlined text-slate-400 text-sm">content_copy</span>
+<span class="material-symbols-outlined text-slate-400 text-sm">share</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Bottom Navigation Bar -->
+<div class="flex gap-2 border-t border-slate-200 dark:border-primary/30 bg-white dark:bg-background-dark px-4 pb-6 pt-2">
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined">group</span>
+</div>
+<p class="text-xs font-medium leading-normal tracking-[0.015em]">Contacts</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-primary" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">auto_fix_high</span>
+</div>
+<p class="text-xs font-medium leading-normal tracking-[0.015em]">Config IA</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined">settings</span>
+</div>
+<p class="text-xs font-medium leading-normal tracking-[0.015em]">Paramètres</p>
+</a>
+</div>
+</div>
+</body></html>

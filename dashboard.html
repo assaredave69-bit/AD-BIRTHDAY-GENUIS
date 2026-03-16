@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#6211d4",
+                        "background-light": "#f7f6f8",
+                        "background-dark": "#181022",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.75rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen font-display">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Header Section -->
+<header class="flex items-center bg-background-light dark:bg-background-dark/80 backdrop-blur-md sticky top-0 z-50 p-4 justify-between border-b border-primary/10">
+<div class="flex items-center gap-3">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-xl bg-primary text-white">
+<span class="material-symbols-outlined">cake</span>
+</div>
+<h1 class="text-slate-900 dark:text-slate-100 text-xl font-bold tracking-tight">Birthday Genius</h1>
+</div>
+<div class="flex items-center gap-2">
+<button aria-label="Notifications" onclick="window.location.href='sync.html'" class="flex size-10 items-center justify-center rounded-full hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-400">notifications</span>
+</button>
+<div onclick="window.location.href='stats.html'" class="cursor-pointer size-10 rounded-full border-2 border-primary bg-center bg-cover bg-no-repeat" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDJgW_tsQ535ArI2kMuqUv5yu1V7kpt1PnMLw2H5ZsmpCYqt_EBc1BEpphwuhV07VTlr9yxRIAMpYwJyUXptNdcpixyP5oAhTVyeHG7gcbQNCBkiHpCOWe9M8RUgNoGL0dPIlUTBNqvLab4oKCDF_I7HtGeq04PpZD6EBDiyFphVfjk82RfPBGg6bN5FpLqNAjiilbcrsTgrPB738jiN8KREXmZA_DxlwdGzJJROe7-Z6zbs2PjfbRXYZV9EKIPBFDG9jkScR7f7rBb");' title="Profil utilisateur">
+</div>
+</div>
+</header>
+<main class="flex-1 pb-24">
+<!-- Today's Birthdays Section -->
+<section class="px-4 pt-6">
+<div class="flex items-center justify-between mb-4">
+<h2 class="text-slate-900 dark:text-slate-100 text-xl font-bold">Anniversaires aujourd'hui</h2>
+<span class="bg-primary/20 text-primary text-xs font-bold px-2 py-1 rounded-full uppercase tracking-wider">2 Actifs</span>
+</div>
+<div class="grid gap-4">
+<!-- Contact Card 1 -->
+<div class="flex items-center gap-4 rounded-xl bg-white dark:bg-primary/5 p-4 border border-slate-200 dark:border-primary/10 shadow-sm">
+<div class="size-16 shrink-0 rounded-full bg-center bg-cover border-2 border-primary/20" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAuoV7Px5h63hMjTPfZMQANfs8snZGi45diZmKejxmWj7uv3SBbkQNBtgxMF61xmH2WcUL45U3lmYjKwhSenD9Vl_Uyi3rts7Hlse5axKC2eqXQs0qPVEpH9kYehl9URXpEJK1xSbXsDaZ1biO-dPVnl4Q2aqFMrXg9IKvIInZs6yzxVVMCMU5JA63naQELv3cuuyZKm8QuoMk74ws5im3iwIxEc0drSu5ZkiWnZL3d_EvpJumTN9blUp08rft3F990Tnh1Y6tSsfrW");'>
+</div>
+<div class="flex flex-1 flex-col">
+<h3 class="text-slate-900 dark:text-slate-100 font-bold text-base leading-tight">Marie Claire</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm">28 ans</p>
+</div>
+<button aria-label="Envoyer un message" onclick="window.location.href='messages.html'" class="flex size-10 items-center justify-center rounded-xl bg-primary text-white hover:bg-primary/90 shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+</button>
+</div>
+<!-- Contact Card 2 -->
+<div class="flex items-center gap-4 rounded-xl bg-white dark:bg-primary/5 p-4 border border-slate-200 dark:border-primary/10 shadow-sm">
+<div class="size-16 shrink-0 rounded-full bg-center bg-cover border-2 border-primary/20" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAxTAoVzbY6Q0idX6NJevcfZwgb_4jpmW0VOefvhTEya530qP7yNg1sG3Z18MsSZfUttDfls6bPSC1ykvyFmGjE4A71pdeDdDPQHNhE_9gh2U8R8dIu06fMAG58f_9oyzVo9UMYU23PdengdtJdjZ71b0ADT6bZ0bLLpqtnUZ_49--i0nfFBRDFCG8iFo-CQ2DX8JBTb6daZv3dTP-FBIly0CXbcNrU0UJVEZ_fNBmXNEBDRLOd5i9hZiOdu07mpZ8rVXXWayfXr9Fd");'>
+</div>
+<div class="flex flex-1 flex-col">
+<h3 class="text-slate-900 dark:text-slate-100 font-bold text-base leading-tight">Jean Dupont</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm">32 ans</p>
+</div>
+<button aria-label="Envoyer un message" onclick="window.location.href='messages.html'" class="flex size-10 items-center justify-center rounded-xl bg-primary text-white hover:bg-primary/90 shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Upcoming Birthdays (Horizontal Scroll) -->
+<section class="mt-8">
+<div class="px-4 mb-4 flex items-center justify-between">
+<h2 class="text-slate-900 dark:text-slate-100 text-xl font-bold">Prochainement</h2>
+<button class="text-primary text-sm font-semibold">Voir tout</button>
+</div>
+<div class="flex gap-4 overflow-x-auto px-4 pb-2 hide-scrollbar">
+<!-- Upcoming Card 1 -->
+<div class="flex flex-col items-center gap-2 min-w-[100px]">
+<div class="size-16 rounded-full border-2 border-slate-200 dark:border-primary/20 bg-center bg-cover p-0.5" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAQQxGoQHRquLHgbIvyDi6v4ZzXx2bN-6BY00abhgF_dSxXN189VA9nNWDhsNvLiDjlRqYCsJ3BNuqeHTWmPa1Mly-s34rte88DsteEOqj6QaaiDK5Va7jbfTLqMmcng6LBDCGmJiwFsblbisA3brlNvPz_n-zrZ9B_u7xPpuu3qXjMbKBY_TDA2DcTp0P4wC_mnhcn1bPMlqpMD_H7nHwum0ryKi8Oe4nC4S4zx9hc_wo65PKbEk-gARRainbNcqYSkB063JeEoN41");'>
+</div>
+<div class="text-center">
+<p class="text-slate-900 dark:text-slate-100 text-sm font-semibold">Sophie</p>
+<p class="text-primary text-xs font-medium">Demain</p>
+</div>
+</div>
+<!-- Upcoming Card 2 -->
+<div class="flex flex-col items-center gap-2 min-w-[100px]">
+<div class="size-16 rounded-full border-2 border-slate-200 dark:border-primary/20 bg-center bg-cover" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCuc1vK2zI7UwFbuhIEmH8A1abSkmz5y1T9rYzLx8AsqFz6x2qV0zGcOGFBbKChOe10qSejmMHeP2k4zV6VUorF5CjnaQLjzaRxMWLpce_zOQyWsVMGz9wixmy3yViKXFBQDA0QrV5mSu2E50MNohix4kbUb3BU0J3mG5oWgMsvYakw9dlQVAcDFqpLYR6MVe6kI6Cx6xcIMrbVXLq-CRnsOc5d3x6vtwg2-SgzahWfrJNVYaSRooOzg-eVS5uNHJYoCseEgwiyMtvj");'>
+</div>
+<div class="text-center">
+<p class="text-slate-900 dark:text-slate-100 text-sm font-semibold">Marc</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs">Dans 3j</p>
+</div>
+</div>
+<!-- Upcoming Card 3 -->
+<div class="flex flex-col items-center gap-2 min-w-[100px]">
+<div class="size-16 rounded-full border-2 border-slate-200 dark:border-primary/20 bg-center bg-cover" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAEvZU8VUTRVNHePaI0Iwbjhw72qeA0E6L0NGpwsrQx5aOZ1o5J6gdJSV1w_hcsNezNrtgTpBGyIM80nyG1V635WExirJZwkMZvckxn7XAVsaTeZ_ilLOETozp8qA22AaGFKhtIfgdwZ6-o95OnlLbj_nXE9mOEMYSNeQtTNBBrgFhk6998aEdbRSc6MhTqBgGqWND_MCyPwYhaJbiq78AoPKLVRzNx_IqjbgTzE55GCAeR3JIXc-3h-nsaoAfDYMU3T2KNvnUOT8Au");'>
+</div>
+<div class="text-center">
+<p class="text-slate-900 dark:text-slate-100 text-sm font-semibold">Léa</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs">Dans 5j</p>
+</div>
+</div>
+<!-- Upcoming Card 4 -->
+<div class="flex flex-col items-center gap-2 min-w-[100px]">
+<div class="size-16 rounded-full border-2 border-slate-200 dark:border-primary/20 bg-center bg-cover" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAQkUNTopEVHAYMFpD4nrcLAWwS9QTC7Cv2Hib8R_hTM0IeOBVhfgs3usxVCowiSkjImuWaLszMbWT_imhb_o-bJwFld__gIEUN2nPGp9zkCs3DnW9BjXC0TjOFUFJacsFSKHLbXXSc7M7xqKONbbJuRmZ3KA5fTkoy_pdkYykxSDmeoq6t-qCdHJc8TM9B9yfKTzpZg-Uej4xemHzMPRAmnm-NZkFogJEn-9oPL4EfHXrOHl55S91wDc6yjKweJQg8ggonla1x_Y1l");'>
+</div>
+<div class="text-center">
+<p class="text-slate-900 dark:text-slate-100 text-sm font-semibold">Lucas</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs">12 oct.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Statistics Summary -->
+<section class="mt-8 px-4">
+<h2 class="text-slate-900 dark:text-slate-100 text-xl font-bold mb-4">Statistiques</h2>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-white dark:bg-primary/10 p-5 rounded-2xl border border-slate-200 dark:border-primary/20">
+<div class="size-10 rounded-lg bg-primary/20 flex items-center justify-center mb-3">
+<span class="material-symbols-outlined text-primary">groups</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Total contacts</p>
+<p class="text-slate-900 dark:text-slate-100 text-2xl font-bold">124</p>
+</div>
+<div class="bg-white dark:bg-primary/10 p-5 rounded-2xl border border-slate-200 dark:border-primary/20">
+<div class="size-10 rounded-lg bg-green-500/20 flex items-center justify-center mb-3">
+<span class="material-symbols-outlined text-green-500">send</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Envoyés (Mois)</p>
+<p class="text-slate-900 dark:text-slate-100 text-2xl font-bold">18</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 z-50 border-t border-slate-200 dark:border-primary/20 bg-white/90 dark:bg-background-dark/90 backdrop-blur-xl px-4 pb-6 pt-3 flex justify-between items-center">
+<a class="flex flex-col items-center gap-1 group" href="#">
+<div class="flex h-8 w-12 items-center justify-center rounded-full bg-primary text-white">
+<span class="material-symbols-outlined fill-1">home</span>
+</div>
+<p class="text-primary text-[10px] font-bold uppercase tracking-widest">Accueil</p>
+</a>
+<a class="flex flex-col items-center gap-1 group" href="#">
+<div class="flex h-8 w-12 items-center justify-center rounded-full text-slate-500 dark:text-slate-400 group-hover:bg-primary/10">
+<span class="material-symbols-outlined">calendar_today</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-[10px] font-bold uppercase tracking-widest">Calendrier</p>
+</a>
+<a class="flex flex-col items-center gap-1 group" href="#">
+<div class="flex h-8 w-12 items-center justify-center rounded-full text-slate-500 dark:text-slate-400 group-hover:bg-primary/10">
+<span class="material-symbols-outlined">person_add</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-[10px] font-bold uppercase tracking-widest">Contacts</p>
+</a>
+<a class="flex flex-col items-center gap-1 group" href="#">
+<div class="flex h-8 w-12 items-center justify-center rounded-full text-slate-500 dark:text-slate-400 group-hover:bg-primary/10">
+<span class="material-symbols-outlined">settings</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-[10px] font-bold uppercase tracking-widest">Réglages</p>
+</a>
+</nav>
+</div>
+</body></html>
